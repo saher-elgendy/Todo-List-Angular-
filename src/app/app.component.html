@@ -6,9 +6,9 @@
   </section>
   <section class="todos-list">
     <ul id="items">
-      <li  id="item" *ngFor="let todo of todos" >
+      <li  class ="flex-container item" *ngFor="let todo of todos" >
         <p [class.completed]="todo.completed">{{todo.title}}</p>
-        <div class="todo-states">
+        <div class="flex-container todo-states">
           <div class="checkbox-cont">
               <input 
                 type="checkbox" 
@@ -26,7 +26,7 @@
   </section>
   <section class="status-msg">
     <p>
-      {{completedTodos}} completed out of {{todos.length}} tasks
+      {{completedTodos}} completed out of {{todos.length}} {{todos.length === 1 ? 'task' : 'tasks'}}
     </p>
   </section>
 </section>

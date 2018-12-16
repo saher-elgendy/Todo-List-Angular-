@@ -73,14 +73,14 @@ input:focus {
 
 /*---item--*/
 
-#item {
+.item {
     color: white;
     justify-content: space-between;
     border-bottom: 0.8px solid #fff;
     transition: 0.4s;
 }
 
-#item:hover {
+.item:hover {
     background-color: rgba(0, 0, 0, 0.2)
 }
 
@@ -141,8 +141,7 @@ input:focus {
      DRY
 ================================================*/
 
-#item,
-.todo-state {
+.flex-container {
     display: flex;
     align-items: center;
 }
