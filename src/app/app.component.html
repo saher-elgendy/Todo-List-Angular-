@@ -10,8 +10,14 @@
         <p [class.completed]="todo.completed">{{todo.title}}</p>
         <div class="todo-states">
           <div class="checkbox-cont">
-              <input type="checkbox" name="todo" id="checkbox" (click)="toggleCompletionState(todo); arrangeTodos()" [checked]="todo.completed" >
-              <label for="checkbox"></label>
+              <input 
+                type="checkbox" 
+                aria-label="completion checkbox"
+                name="todo" 
+                id="checkbox" 
+                (click)="toggleCompletionState(todo); arrangeTodos()"
+                [checked]="todo.completed" 
+              >
           </div>   
               <i class="fa fa-trash" (click)="removeTodo(todo)"></i>     
         </div>    
@@ -20,7 +26,7 @@
   </section>
   <section class="status-msg">
     <p>
-      {{completedTodos}} completed {{completedTodos.length === 1 ? 'task'  : 'tasks'}} out of {{todos.length}}
+      {{completedTodos}} completed out of {{todos.length}} tasks
     </p>
   </section>
 </section>
