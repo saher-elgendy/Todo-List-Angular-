@@ -11,8 +11,8 @@ export class TodoDataService {
   id: number = 0;
 
   addTodo(value): TodoDataService {
-    //using the input value as a todo title
-    this.todos = [...this.todos, {title: value, id: this.id++, completed: false}];
+    //using the input value as a todo title and adding the new todo at the top
+    this.todos = [{title: value, id: this.id++, completed: false}, ...this.todos];
     return this;
   }
   //remove todo depending on 'id'
