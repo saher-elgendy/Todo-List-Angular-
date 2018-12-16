@@ -1,0 +1,150 @@
+/*=========================
+  The container
+==========================*/
+.todo-app {
+   text-align: center;
+   height: 100vh;
+   margin: auto;
+   padding: 0 5%;
+   background: url('../assets/images/bg.jpg') no-repeat 20% 0 / cover;
+   overflow: auto;
+   
+}
+/*==================================
+  Input and button
+===================================*/
+.todo-app input, .todo-app .btn{
+   font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    box-sizing: content-box;
+}
+
+.todos-list {
+    padding: 0 5%;
+    margin-top: 10px;
+}
+
+.input {
+   width: 150px;
+   transition: 0.4s;
+}
+
+input:focus {
+    width:250px;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.btn {
+    width:70px;
+    height: 25px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*========================================
+   List items
+==========================================*/
+
+/* ---All items--*/
+
+#items {
+    list-style-type: none;
+    width: 40%;
+    margin: 0 auto 1em;
+    padding: 0;
+    min-width: 300px;
+}
+
+/*---item--*/
+
+#item {
+    color: white;
+    justify-content: space-between;
+    border-bottom: 0.8px solid #fff;
+}
+
+/*---checkbox and trash icon container--*/
+
+/*---trash icon--*/
+.fa-trash {
+    display: inline-block;
+    opacity: 0.5;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.fa-trash:hover {
+    opacity: 1;
+}
+
+/*---checkbox--*/
+
+.checkbox-cont {
+    display: inline-block;
+}
+
+#checkbox {
+    width: 20px;
+    outline: 0;
+    position: relative;
+    top: 3px;  
+}
+
+/*---orange color added if the task is completed--*/
+
+.completed {
+    color: orange;
+}
+
+/*---status-message--*/
+
+.status-msg {
+    color: #fff;
+    border: 2px solid #eee;
+    width: 35%;
+    min-width: 300px;
+    margin:  3em auto;
+    transition: 0.4s;
+}
+
+.status-msg:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    margin: 5px;
+    color: white;
+}
+
+/*==============================================
+     DRY
+================================================*/
+
+#item,
+.todo-state {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+    .input {
+        max-width: 220px;
+    }
+}
+
